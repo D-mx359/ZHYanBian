@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汪清</title>
+    <link rel="stylesheet" href="../static/css/styles/汪清.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('wangqing1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>汪清县介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">耕地资源</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <div class="left2">
+            <p class="module">
+                <span class="title">矿产资源种类</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/汪清1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/汪清2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/汪清3.jpeg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/汪清3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/汪清6.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/汪清4.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <p class="module">
+                <span class="title">各类资源</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">南北纵长</p>
+                <p class="count">108公里</p>
+                
+            </div>
+            <div>
+                <p class="type">东西横距</p>
+                <p class="count">152公里</p>
+            </div>
+            <div>
+                <p class="type">总人口</p>
+                <p class="count">22.2万</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">距俄罗斯</p>
+                <p class="count">40公里</p>
+                
+            </div>
+            <div>
+                <p class="type1">距朝鲜</p>
+                <p class="count">18公里</p>
+            </div>
+            <div>
+                <p class="type1">民族数</p>
+                <p class="count">25个</p>
+            </div>
+        </div>
+        <div class="right2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/汪清新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/汪清新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/汪清新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/汪清新4.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/汪清新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/汪清新6.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/汪清.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

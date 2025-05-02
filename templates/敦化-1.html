@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敦化野生动物</title>
+    <link rel="stylesheet" href="../static/css/styles/common.css">
+</head>
+<body>
+    <div class="title">
+        <div id="title-p"><p>野生动物资源简介</p></div>
+        <div id="back"><a href="{{ url_for('dunhua') }}">返回</a></div>
+        
+    </div>
+    <div class="mainbox">
+        <div class="box">
+            <div class="box1">
+                <h1>境内已掌握的兽、鸟、鱼、两栖类野生动物共有161种。兽类有31种;鸟类有72种;鱼类有等54种;两栖动物有4种，敦化是东北林蛙的主产地，总量超过千万只，享誉国内外。列入《国家重点保护野生动物名录》的一级珍稀保护、动物二级保护动物数量众多</h1>
+            </div>
+        </div>
+        <div class="left2">
+            <div id="left2Chart"></div>
+        </div>
+    </div>
+   <!-- 将滑动光粒效果的 canvas 元素添加到此处 -->
+    <canvas id="canv" style="width: 100%; height: 100%"></canvas>
+    <script src="../static/js/js/common-1.js"></script>
+    <script src="../static/js/js/common-2.js"></script>
+    <script src="../static/js/js/敦化-1.js"></script>
+</body>
+</html>

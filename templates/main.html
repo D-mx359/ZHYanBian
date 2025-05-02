@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<link rel="stylesheet" href="../static/css/styles/main.css">
+<body>
+<div id="root">
+    <header>
+        <div class="date">
+            <div class="currentTime"></div>
+            <div class="cDate">
+                <div class="currentDate"></div>
+                <div class="currentWeek"></div>
+            </div>
+        </div>
+        <div class="site">
+            <span class="links-container">
+                <a href="{{ url_for('data') }}">返回</a> 
+            </span>
+        </div>
+    </header>
+    <div class="main">
+        <div class="left">
+            <div class=" placemodule">
+                <p class="module">
+                    <span class="iconfont">&#xe73e;</span>
+                    <span class="title">景区分布</span>
+                </p>
+                <div id="AAAAA"></div>
+            </div>
+            <div class=" buymodule">
+                <p class="module">
+                    <span class="iconfont">&#xe73e;</span>
+                    <span class="title">商品购买</span>
+                </p>
+                <div id="buy"></div>
+            </div>
+        </div>
+        <div class="middle">
+            <!-- 延边州地图 -->
+            <div class="map">
+                <div id="mapChart"></div>
+            </div>
+            <div class="moviemodule">
+                <div id="movie"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="TVmodule">
+                <p class="module">
+                    <span class="iconfont">&#xe73e;</span>
+                    <span class="title">电视节目</span>
+                </p>
+                <div id="TV"></div>
+            </div>
+            <div class="GBmodule">
+                <p class="module">
+                    <span class="iconfont">&#xe73e;</span>
+                    <span class="title">广播节目</span>
+                </p>
+                <div id="GB"></div>
+            </div>
+            <div class="servicemodule">
+                <p class="module">
+                    <span class="iconfont">&#xe73e;</span>
+                    <span class="title">旅游体验</span>
+                </p>
+                <div id="service"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/china.js"></script>
+<script src="../static/js/js/areaMap.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/main.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

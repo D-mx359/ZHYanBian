@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>延吉</title>
+    <link rel="stylesheet" href="../static/css/styles/延吉.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('yanji1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>延吉市介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">人口组成</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <div class="left2">
+            <p class="module">
+                <span class="title">消费指数上涨率</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/延吉1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/延吉2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/延吉3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/延吉4.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/延吉5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/延吉6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <p class="module">
+                <span class="title">文体建设</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">面积</p>
+                <p class="count">1748<br>平方公里</p>
+                
+            </div>
+            <div>
+                <p class="type">街道</p>
+                <p class="count">6个</p>
+            </div>
+            <div>
+                <p class="type">镇</p>
+                <p class="count">4个</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">户籍人口</p>
+                <p class="count">54.13<br>万人</p>
+                
+            </div>
+            <div>
+                <p class="type1">城市化水平</p>
+                <p class="count">超过90%</p>
+            </div>
+            <div>
+                <p class="type1">国家荣誉称号</p>
+                <p class="count">超过150个</p>
+            </div>
+        </div>
+        <div class="right2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/延吉新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/延吉新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/延吉新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/延吉新4.png" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/延吉新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/延吉新6.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/延吉.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

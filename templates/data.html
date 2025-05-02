@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<link rel="stylesheet" href="../static/css/styles/data.css">
+<body>
+    <div id="root"> 
+        <header> 
+            <div class="date"> 
+                <div class="currentTime"></div> 
+                <div class="cDate"> 
+                    <div class="currentDate"></div> 
+                    <div class="currentWeek"></div> 
+                </div> 
+            </div> 
+            
+            <div class="site"> 
+                <a href="{{ url_for('main') }}" id="backButton">延边州介绍</a>
+                <a href="https://www.jl.gov.cn/yaowen/202401/t20240125_3037658.html" target="_blank" id="backButton">相关政策</a>
+                <span class="iconfont">&#xe70c;</span> 
+                <span class="city">中国</span> 
+            </div> 
+        </header> 
+        <div class="main">
+            <div class="left">
+                <!-- 各交通方式占比 -->
+                <div class="distributeByType">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">各交通方式占比</span>
+                    </p>
+                    <div id="distributeByTypeChart"></div>
+                    <!-- <div class="total">125876</div> -->
+                </div>
+                <!-- 近五年旅游信息 -->
+                <div class="faultAnalysis">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">近五年旅游信息</span>
+                    </p>
+                    <div id="faultAnalysisChart"></div>
+                </div>
+                <!-- 各景点客流量排行 -->
+                <div class="faultCondition">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">各地区排行</span>
+                    </p>
+                    <table class="faultConditionTable">
+                        <tr>
+                            <th>排名</th>
+                            <th class="company">项目</th>
+                            <th>人均消费(元)</th>
+                            <th>所占比例(%)</th>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>食</td>
+                            <td>473.65</td>
+                            <td>30.20</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>住</td>
+                            <td>442.87</td>
+                            <td>28.23</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>行</td>
+                            <td>386.25</td>
+                            <td>24.62</td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>游</td>
+                            <td>152.41</td>
+                            <td>9.72</td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>购</td>
+                            <td>72.88</td>
+                            <td>4.65</td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>娱</td>
+                            <td>40.41</td>
+                            <td>2.58</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="middle">
+                <!-- 中国地图 -->
+                <div class="map">
+                    <div id="mapChart"></div>
+                    <!-- *************************** -->
+                    <div class="statistics">
+                        <div>
+                            <p class="count">97.24(亿元)</p>
+                            <p class="type">总收入</p>
+                        </div>
+                        <div>
+                            <p class="count">788.79(万人次)</p>
+                            <p class="type">接待人数</p>
+                        </div>
+                        <div>
+                            <p class="count">黑龙江</p>
+                            <p class="type">游客来源最多</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 各景点状况分析 -->
+                <div class="situationAnalysis">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">各景点状况分析</span>
+                    </p>
+                    <div id="situationAnalysisChart"></div>
+                </div>
+            </div>  
+            <div class="right">
+                <div class="rate">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">旅游体验</span>
+                    </p>
+                    <div id="nationalAnalysisChart"></div>
+                </div>
+                <!-- 游客来源 -->
+                <div class="distributeByStatus">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">国际游客来源</span>
+                    </p>
+                    <div id="distributeByStatusChart"></div>
+                </div>
+                <!-- 旅游体验 -->
+                <div class="distributeByServer">
+                    <p class="module">
+                        <span class="iconfont">&#xe73e;</span>
+                        <span class="title">国内游客来源</span>
+                    </p>
+                    <div id="distributeByServerChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/china.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/data.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+
+</html>

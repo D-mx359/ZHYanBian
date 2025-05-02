@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* 饼图 */
+* {
+  margin:0;
+  padding:0;
+}
+html,
+body{
+  height:100%;
+  font-family: "微软雅黑";
+  
+  background: url(../imgs/bg\ -\ 副本.jpg) center;
+  
+}
+ul,
+h2,
+li {
+  list-style-type: none;
+}
+.title{
+  display: flex;
+  /* background-color: #fff; */
+  height: 20%;
+}
+#title-p{
+  height: 100%;
+  width: 60%;
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  margin-top: 50px;
+  margin-left: 20%;
+}
+#back{
+  height: 100px;
+  width: 20%;
+  float: right;
+  text-align: center;
+  margin-top: 40px;
+  a{
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 25px;
+      text-decoration: none;
+      color: rgb(0, 149, 255);
+  }
+  a:hover{
+      color: #f48003;
+  }
+}
+.mainbox {
+  display: flex;
+  height: 80%;
+ 
+  padding: 0.1rem 0.1rem 0rem 0.1rem;
+  z-index: 1;
+  
+}
+.box{
+  flex: 5;
+  margin-top: 40px;
+  
+}
+.box1{
+  position: relative;
+  top: 4%;
+  height:500px;
+  width: 400px;
+  /* left: 5%;
+  z-index: 50;
+  bottom: 0.8px; */
+  background: url(../images/素材_72.png)center top;
+  background-size: cover;
+
+}
+.box1 h1{
+  position: relative;
+
+  top: 28%;
+  height:68%;
+  width: 80%;
+  left: 9%;
+  color: #fff;
+  padding: 6px;
+  
+  font-weight: 300;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  z-index: 51;
+}
+#canv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5; /* 可选：调整透明度，以便查看 canvas 是否可见 */
+}

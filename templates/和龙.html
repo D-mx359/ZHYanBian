@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和龙</title>
+    <link rel="stylesheet" href="../static/css/styles/和龙.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('helong1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>和龙市介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">各类资源</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <a href="{{ url_for('helong_1') }}">
+            <div class="left2">
+            <p class="module">
+                <span class="title">草地面积(公顷)</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+        </a>
+        
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/和龙1.png" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/和龙2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/和龙3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/和龙4.png" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/和龙5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/和龙6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <p class="module">
+                <span class="title">各类土地资源面积</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">东</p>
+                <p class="count">与龙井市接壤</p>
+                
+            </div>
+            <div>
+                <p class="type">西</p>
+                <p class="count">与安图县毗邻</p>
+            </div>
+            <div>
+                <p class="type">南</p>
+                <p class="count">与朝鲜咸境北道、两江道隔江相望</p>
+            </div>
+            <div>
+                <p class="type">北</p>
+                <p class="count">与龙井安图搭界</p>
+                
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">南北长</p>
+                <p class="count">100<br>公里</p>
+                
+            </div>
+            <div>
+                <p class="type1">东西宽</p>
+                <p class="count">70<br>公里</p>
+                
+            </div>
+            <div>
+                <p class="type1">总面积</p>
+                <p class="count">5068.62<br>平方公里</p>
+            </div>
+            <div>
+                <p class="type1">国境线</p>
+                <p class="count">177.9<br>公里</p>
+            </div>
+        </div>
+        <div class="right2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/和龙新1.png" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/和龙新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/和龙新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/和龙新4.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/和龙新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/和龙新6.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/和龙.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

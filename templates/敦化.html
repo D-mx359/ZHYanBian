@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敦化</title>
+    <link rel="stylesheet" href="../static/css/styles/敦化.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('dunhua1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>敦化市介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">土地分类</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <a href="{{ url_for('dunhua_1') }}">
+            <div class="left2">
+            <p class="module">
+                <span class="title">野生动物资源</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+        </a>
+        
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/敦化1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/敦化2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/敦化3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/敦化4.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/敦化5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/敦化6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/敦化新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新4.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新6.webp" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新7.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/敦化新8.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div id="right1Chart"></div>
+        </div>
+        <a href="{{ url_for('dunhua_2') }}">
+            <div class="right2">
+            <p class="module">
+                <span class="title">矿产资源（万吨）</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+        </a>
+        
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/敦化.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

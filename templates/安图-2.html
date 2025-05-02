@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安图药用植物</title>
+    <link rel="stylesheet" href="../static/css/styles/common.css">
+</head>
+<body>
+    <div class="title">
+        <div id="title-p"><p>药用资源简介</p></div>
+        <div id="back"><a href="{{ url_for('antu') }}">返回</a></div>
+        
+    </div>
+    <div class="mainbox">
+        <div class="box">
+            <div class="box1">
+                <h1>长白山是我国三大中草药材库之一，安图县被国家确定为“绿色中药材出口基地县”，被省政府列为北药基地县之一。现已经发现的药用植物800余种,其中人参等名贵药材670多种，临床常用的传统中药材就有155种。
+                    野生药用植物资源在安图县分布空间大,蕴藏量十分丰富。仅常见的20几个主要品种就有23，361公顷。年可采集5800吨优质干品</h1>
+            </div>
+        </div>
+        <div class="left2">
+            <div id="left2Chart"></div>
+        </div>
+        
+    </div>
+   <!-- 将滑动光粒效果的 canvas 元素添加到此处 -->
+    <canvas id="canv" style="width: 100%; height: 100%"></canvas>
+    <script src="../static/js/js/common-1.js"></script>
+    <script src="../static/js/js/common-2.js"></script>
+    <script src="../static/js/js/安图-2.js"></script>
+</body>
+</html>

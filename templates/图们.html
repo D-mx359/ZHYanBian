@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图们</title>
+    <link rel="stylesheet" href="../static/css/styles/图们.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('tumen1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>图们市介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">水资源占比</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <div class="left2">
+            <p class="module">
+                <span class="title">林木资源</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/图们1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/图们2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/图们3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/图们4.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/图们5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/图们6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <p class="module">
+                <span class="title">各类型土地(除林地外)占比</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">面积</p>
+                <p class="count"><br>1142.65<br>平方公里</p>
+                
+            </div>
+            <div>
+                <p class="type">边境线长</p>
+                <p class="count">60.3公里</p>
+            </div>
+            <div>
+                <p class="type">总人口</p>
+                <p class="count">8.52万人</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">距俄罗斯</p>
+                <p class="count">100公里</p>
+                
+            </div>
+            <div>
+                <p class="type1">距日本海</p>
+                <p class="count">130公里</p>
+            </div>
+            <div>
+                <p class="type1">建市时间</p>
+                <p class="count">1965年</p>
+            </div>
+        </div>
+        <div class="right2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/图们新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/图们新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/图们新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/图们新4.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/图们新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/图们新6.webp" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/图们.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

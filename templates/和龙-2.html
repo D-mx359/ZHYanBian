@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安图生态有机物</title>
+    <link rel="stylesheet" href="../static/css/styles/common.css">
+</head>
+<body>
+    <div class="title">
+        <div id="title-p"><p>生态有机物资源简介</p></div>
+        <div id="back"><a href="{{ url_for('antu') }}">返回</a></div>
+        
+    </div>
+    <div class="mainbox">
+        <div class="box">
+            <div class="box1">
+                <h1>本图，用柱状图对各类生态资源做了展示，除此之外安图县境内的经济植物资源丰富，开发潜力巨大。不但有适合加工饮料、果酒的资源，如越桔、山葡萄、蓝靛果忍冬、软枣猕猴桃，尤以越桔(蓝莓)和山葡萄，倍受青睐。还有适合加工果仁的，如山核桃、红松籽和榛子等</h1>
+            </div>
+        </div>
+        <div class="left2">
+            <div id="left2Chart"></div>
+        </div>
+        
+    </div>
+    <canvas id="canv" style="width: 100%; height: 100%"></canvas>
+    <script src="../static/js/js/common-1.js"></script>
+    <script src="../static/js/js/common-2.js"></script>
+    <script src="../static/js/js/安图-1.js"></script>
+</body>
+</html>

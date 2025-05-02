@@ -1,0 +1,389 @@
+*{
+    margin:0;
+    padding:0;
+}
+::-webkit-scrollbar  
+{  
+    width: 0rem;  
+    height: 0px;  
+    background-color: red;  
+} 
+body{
+    background:url("/static/imgs/bg.jpg") center center;
+    background-size: cover;
+    color:white;
+    font-family: '微软雅黑';
+}
+#root{
+    height:56.3vw;  
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../icon/iconfont.eot');
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../icon/iconfont.woff') format('woff'),
+    url('../icon/iconfont.ttf') format('truetype'),
+    url('../icon/iconfont.svg#iconfont') format('svg');
+  }
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:.2rem;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .0025rem;
+    -moz-osx-font-smoothing: grayscale;
+  }
+.fr{
+  float:right;
+}
+.filter-type{
+    font-size: 0;
+}
+.filter-type li:hover{
+    cursor: pointer;
+}
+.filter-type li{
+    display: inline-block;
+    width:1.125rem;
+    line-height: .45rem;
+    font-family: myFirstFont;
+    font-size: .2rem;
+    text-align:center ;
+    color:#0f67d9;
+    border:solid .0125rem #03327a;
+    background:#03327a;
+}
+.filter-type li.active{
+    color:white;
+    background:#020c40;
+}
+
+.main .left .placemodule{
+    height:29vw;
+}
+#AAAAA{
+    height:25vw;
+}
+
+.main .left .buymodule{
+    height:19vw;
+}
+#buy{
+    height:19vw;
+}
+
+.main .middle .map{
+    height: 500px !important;
+    margin: 0px;
+}
+
+.main .middle .moviemodule{
+    height:20vw;
+}
+#movie{
+    height:20vw;
+}
+
+.main .right .TVmodule{
+    height:15vw;
+}
+#TV{
+    height:15vw;
+}
+.main .right .GBmodule{
+    height:15vw;
+}
+#GB{
+    height:15vw;
+}
+.main .right .servicemodule{
+    height:17vw;
+}
+#service{
+    height:13vw;
+}
+
+#root{
+    background:url("../imgs/bg.jpg") no-repeat center top;
+    background-size: cover;
+}
+/* -----------------------------header------------------------- */
+header{
+    height:5.4vw;
+    display: flex;
+    justify-content: space-between;
+}
+header .date{
+    height:3.3vw;
+    width:15vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .date .currentTime{
+    font-size: 24px;
+    font-weight: 600;
+    margin:0 10px;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(250, 250, 250, 1)), to(rgba(5, 197, 215, 1)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 45px #104ec7;
+}
+
+header .date .currentDate{
+    margin:5px 0;
+}
+header .date .currentDate,.currentWeek{
+    font-size: 14px;
+    font-weight: 600;
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(250, 250, 250, 1)), to(rgba(5, 197, 215, 1)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 45px #104ec7;
+}
+header .site{
+    height:3.3vw;
+    display:flex;
+    align-items: center;
+    padding-right: 2vw;
+    font-weight: 600;
+
+}
+header .site .links-container{
+    a {
+        display: inline-block; /* 将链接变为块级元素，这样可以设置内边距 */
+        padding: 50px;
+        font-size: .25rem;   
+        text-decoration: none; /* 去除链接下划线 */
+    }
+    a {
+        color: #104ec7; /* 设置链接文本颜色为#104ec7 */
+        transition: color 0.3s; /* 添加过渡效果，使颜色变化平滑 */
+    }
+
+    a:hover {
+        color: white; /* 当鼠标悬停时，链接颜色变为红色 */
+    }
+}
+a {
+    text-align: center;
+}
+header .site .areaName{
+    margin:0 0.2vw;
+}
+header .site .areaName,.iconfont{
+    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(250, 250, 250, 1)), to(rgba(5, 197, 215, 1)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 45px #104ec7;
+}
+.selectDom{
+    position: absolute;
+    display: none;
+    top: 63px;
+    right: 33px;
+    padding: 20px 20px 20px 10px;
+    border: solid 2px #06538f;
+    z-index: 2;
+    border-radius: 5px;
+    background: #102141;
+}
+.selectDom::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    right: 31px;
+    top: -15px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 14px solid #06538f;
+}
+.selectDom::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    right: 33px;
+    top: -12px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 12px solid #102141;
+}
+.zProvinceItem:hover,
+.zcityItem:hover{
+    cursor: pointer;
+}
+.zcityItem,.zProvinceItem{
+    position: relative;
+    width: 143px;
+    height: 40px;
+    border-radius: 5px;
+    float: left;
+    background: url(/static/imgs/selcetBG.png) center no-repeat;
+    margin-left: 10px;
+}
+.zprovinceItem-head:after,.zcityItem-head:after{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background: url(/static/imgs/arrow-down.png) center no-repeat;
+}
+.currentValue {
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    background: #102141;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #15a7f1;
+    margin-top: 4px;
+    margin-left: 16px;
+}
+.cityContainer,.provinceContainer{
+    z-index: 2;
+    margin-left:2px;
+    width: 140px;
+    background: #102141;
+    border: solid 2px #06538f;
+}
+.cityTips,.cityitem,
+.provinceTips,.provinceitem{
+    font-size: 16px;
+    color:#168fcd;
+}
+.provinceTips:hover,
+.cityTips:hover{
+    background: #06538f;
+}
+.cityContainer,.provinceContainer{
+    display: none;
+}
+.cityitem:hover,.provinceitem:hover{
+    cursor: pointer;
+    color:#fff;
+    background: #06538f;
+}
+
+.main{
+    display:flex;
+    justify-content: space-between;
+    margin:0 1.3vw;
+}
+
+.main .left{
+    width:26vw;
+}
+.main .middle{
+    width:43vw;
+    margin:0 0.7vw;
+}
+.main .right{
+    width:26.4vw;
+}
+.main .module{
+    height:2.8vw;
+    display: flex;
+    align-items: center;
+    padding-left: 1vw;
+}
+.main .module .title{
+    margin-top: -24px;
+    margin-left:2.5vw;
+    font-size: .25rem;
+    color: #104ec7;
+    text-decoration: none;
+}
+.main .module .title:hover{
+    color: white;
+}
+.main .module .title:before{
+    position: relative;
+    left: -48px;
+    top: 24px;
+    content: '';
+    display: block;
+    width: 40px;
+    height: 25px;
+    background: url("/static/imgs/titleImg.png") center no-repeat;
+}
+
+/* -----------------------------敦化市------------------------- */
+.main .left .dunhua{
+    height:16vw;
+}
+
+/* -----------------------------延吉市------------------------- */
+.main .left .antu{
+    height: 16vw;
+}
+
+/* -----------------------------图们市------------------------- */
+.main .left .helong{
+    height: 16vw;
+}
+/* -----------------------------MAP以及统计------------------------- */
+.main .middle .map{
+    height:33vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#mapChart{
+    height:28vw;
+}
+.main .middle .map .statistics{
+    height:4.0vw;
+    border-top: 1px solid #0a4192;
+    display: flex;
+    align-items: center;
+}
+.main .middle .map .statistics>div{
+    width:33%;
+    text-align: center;
+    height:3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main .middle .map .statistics>div .count{
+    font-size: 24px;
+}
+.main .middle .map .statistics>div .type{
+    color:#13a0eb;
+    font-size: 14px;
+}
+.main .middle .map .statistics>div{
+    border-left:1px solid #175497;
+}
+.main .middle .map .statistics>div:nth-child(1){
+    border-left:none;
+}
+.main .middle .landa {
+    display: flex;
+}
+.main .middle .landa .longjing,
+.main .middle .landa .yanji {
+    flex: 1;
+}
+
+/* -----------------------------珲春市------------------------- */
+.main .right .wangqing{
+    height:16vw;
+}
+/* -----------------------------和龙市------------------------- */
+.main .right .hunchun{
+    height:16vw;
+}
+/* -----------------------------汪清县------------------------- */
+.main .right .tumen{
+    height:16vw;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙井</title>
+    <link rel="stylesheet" href="../static/css/styles/龙井.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('longjing1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>龙井市介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">各种美称</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <a href="{{ url_for('longjing_1') }}">
+            <div class="left2">
+                <p class="module">
+                    <span class="title">自然资源</span>
+                </p>
+                <div id="left2Chart"></div>
+            </div>
+        </a>
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/龙井市1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/龙井2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/龙井3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/龙井4.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/龙井5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/龙井6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <p class="module">
+                <span class="title">城乡设施建设</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">面积</p>
+                <p class="count"><br>2208<br>平方公里</p>
+                
+            </div>
+            <div>
+                <p class="type">森林覆盖率</p>
+                <p class="count">71.5%</p>
+            </div>
+            <div>
+                <p class="type">总人口</p>
+                <p class="count"><br>16.7万人</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">镇</p>
+                <p class="count"><br>5个</p>
+                
+            </div>
+            <div>
+                <p class="type1">乡</p>
+                <p class="count"><br>2个</p>
+            </div>
+            <div>
+                <p class="type1">社区管<br>委会</p>
+                <p class="count">1个</p>
+            </div>
+        </div>
+        <div class="right2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/龙井新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/龙井新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/龙井新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/龙井新4.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/龙井新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/龙井新6.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/龙井.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

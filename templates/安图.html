@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安图</title>
+    <link rel="stylesheet" href="../static/css/styles/安图.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('antu1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>安图县介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">林业分类</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <a href="{{ url_for('antu_2') }}">
+            <div class="left2">
+            <p class="module">
+                <span class="title">食用/药用植物</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+        </a>
+        
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/安图1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/安图2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/安图3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/安图4.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/安图5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/安图6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/安图新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新2.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新3.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新4.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新6.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新7.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/安图新8.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">面积</p>
+                <p class="count">7444<br>平方公里</p>
+            </div>
+            <div>
+                <p class="type">户籍人口</p>
+                <p class="count">54.13<br>万人</p>
+                
+            </div>
+            <div>
+                <p class="type">边境线长</p>
+                <p class="count">36.7<br>公里</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">街道</p>
+                <p class="count">3个</p>
+            </div>
+            <div>
+                <p class="type1">镇</p>
+                <p class="count">7个</p>
+            </div>
+            <div>
+                <p class="type1">乡</p>
+                <p class="count">2个</p>
+            </div>
+        </div>
+        <a href="{{ url_for('antu_1') }}">
+            <div class="right2">
+            <p class="module">
+                <span class="title">生态有机植物</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+        </a>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/安图.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

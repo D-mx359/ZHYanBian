@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>随机滚动文本</title>
+<style>
+body{
+    background:url("/static/imgs/hunchun.png");
+    background-repeat: no-repeat;
+    background-size:   100vw 100vh;
+}    
+.title {
+  position: absolute;
+  top: 0%; /* 相对于父容器的位置 */
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%); /* 居中定位 */
+  text-align: center; /* 文字居中 */
+  font-size: 24px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  color: black;
+}
+
+/* 设置返回按钮的样式 */
+.return-button {
+  position: absolute;
+  top: 10px; /* 相对于父容器的位置 */
+  right: 30px; /* 距离右边框10px */
+  font-size: 25px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  cursor: pointer; /* 鼠标样式为手型 */
+  a{
+    display: inline-block;  
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: #f48003;
+  }
+}
+
+/* 设置段落文字的样式 */
+.paragraph {
+  position: absolute;
+  top: 25%; /* 相对于父容器的位置 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 居中定位 */
+  text-align: left; /* 文字居中 */
+  font-size: 25px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  color: black;
+}
+
+/* 设置滚动容器的样式 */
+.scroll-container {
+  position: fixed;
+  bottom: 0; /* 位于页面底部 */
+  left: 0;
+  width: 100%;
+  height: 50%; /* 限制容器高度为页面高度的一半 */
+  overflow: hidden; /* 隐藏超出部分 */
+}
+
+/* 设置文本的样式 */
+.scroll-text {
+  white-space: nowrap; /* 防止文本换行 */
+  animation: scrollText 5s linear infinite; /* 使用动画让文本滚动 */
+}
+
+/* 定义文本滚动的动画 */
+@keyframes scrollText {
+  from {
+    transform: translateX(100%); /* 从容器底部开始 */
+  }
+  to {
+    transform: translateX(-100%); /* 滚动到容器顶部 */
+  }
+}
+</style>
+</head>
+<body>
+    <div class="title">
+        <h1>珲春市（中国朝鲜语:훈춘시）</h1>
+      </div>
+      
+    <div class="return-button" >
+      <a href="{{ url_for('hunchun') }}">返回</a>
+    </div>
+
+    <div class="paragraph">
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;吉林省延边朝鲜族自治州辖县级市，
+            地处吉林省东部，延边州东南，
+            被赋予地级市政府管理权限，
+            是吉林省扩权强县改革试点市、陆地边境口岸城市。
+            政区以珲春岭为界与俄罗斯滨海边疆区的哈桑区接壤，
+            西南以图们江为界与朝鲜罗先市相邻，
+            北部以老爷岭为界与汪清县毗连，
+            西北角与图们市相连，’
+            东北与黑龙江省东宁市相邻，
+            总面积5141平方千米。
+        </p>
+    </div>
+
+<div class="scroll-container" id="scroll-container"></div>
+
+<script>
+// 获取滚动容器
+var container = document.getElementById('scroll-container');
+
+// 定义可选的文本内容、颜色和字体大小
+var texts = [
+  "延边大学珲春校区",
+  "一眼望三国",
+  "帝王蟹",
+  "防川",
+  "东方第一村",
+  "圈河口岸",
+  "朝鲜",
+  "俄罗斯",
+  "龙虎阁",
+  "图们江沙洲",
+  "哇斯托克欢乐岛",
+  "欧式街",
+  "吴大徵纪念碑",
+  "东方第一哨",
+  "土字石界碑",
+  "碧藻红莲池",
+  "绿洲金沙丘",
+  "民俗朝族村",
+  "张鼓战役峰",
+  "洋馆坪大堤",
+  "红色文化民俗博物馆",
+  "大荒沟红色旅游景区",
+  "甩湾子断桥",
+  "大荒沟漂流旅游景区",
+  "地下森林",
+  "吊水壶瀑布",
+  "灵宝寺",
+  "孟岭村",
+  "防川花海",
+  "金沙滩欢乐谷",
+  "老龙湖景区",
+  "东北虎"
+];
+
+shuffleArray(texts);
+
+// 逐个添加文本并设置随机样式
+texts.forEach(function(text, index) {
+  
+  setTimeout(function() {
+    var scrollText = document.createElement('div');
+    scrollText.textContent = text;
+    scrollText.classList.add('scroll-text');
+    // 设置随机位置
+    var randomX = Math.floor(Math.random() * (window.innerWidth - 100)) + 'px'; // 随机水平位置
+    var randomY = Math.floor(Math.random() * (window.innerHeight / 2)) + (window.innerHeight / 2) + 'px'; // 随机垂直位置
+    scrollText.style.left = randomX;
+    scrollText.style.top = randomY;
+    // 设置随机颜色和字体大小
+    var r = Math.floor(Math.random() * 76) + 180;
+    var g = Math.floor(Math.random() * 76) + 180;
+    var b = Math.floor(Math.random() * 76) + 180;
+    // 将 RGB 值组合成颜色字符串
+    var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    var minSize = 24; // 最小字体大小
+    var maxSize = 60;
+    var fontSize = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
+    var randomFontSize = fontSize + 'px';
+    scrollText.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)'; 
+    scrollText.style.color = randomColor;
+    scrollText.style.fontSize = randomFontSize;
+    container.appendChild(scrollText);
+  }, index * 3000); // 设置每段文本的延迟时间为3秒
+});
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+</script>
+
+</body>
+</html>

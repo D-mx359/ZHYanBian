@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珲春</title>
+    <link rel="stylesheet" href="../static/css/styles/珲春.css">
+</head>
+<body>
+    <div id="header">
+        <div id="back">
+            <a href="{{ url_for('main') }}">返回</a>
+            <a href="{{ url_for('hunchun1') }}">详细介绍</a>
+        </div>
+        <div id="title">
+            <p>珲春市介绍</p>
+        </div>
+    </div>
+    <div class="left">
+        <div class="left1">
+            <p class="module">
+                <span class="title">经济动物资源</span>
+            </p>
+            <div id="left1Chart"></div>
+        </div>
+        <a href="{{ url_for('hunchun_1') }}">
+            <div class="left2">
+            <p class="module">
+                <span class="title">矿产资源储备(万吨)</span>
+            </p>
+            <div id="left2Chart"></div>
+        </div>
+        </a>
+        
+    </div>
+    <div class="rq">
+        <div class="slide">
+            <div class="slide-img"><img src="../static/imgs/珲春1.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/珲春2.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/珲春3.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/珲春4.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/珲春5.jpg" width="700" height="435"></div>
+            <div class="slide-img"><img src="../static/imgs/珲春6.jpg" width="700" height="435"></div>
+            <div class="button">
+                <ul>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                    <li class="btn"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle2">
+            <p class="module">
+                <span class="title">经济植物资源</span>
+            </p>
+            <div id="middle2Chart"></div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="statistics">
+            <div>
+                <p class="type">面积</p>
+                <p class="count"><br>5134<br>平方公里</p>
+                
+            </div>
+            <div>
+                <p class="type">距图们江<br>入海口</p>
+                <p class="count">15公里</p>
+            </div>
+            <div>
+                <p class="type">森林覆盖率</p>
+                <p class="count">86%以上</p>
+            </div>
+        </div>
+        <div class="statistics">
+            <div>
+                <p class="type1">居住民族</p>
+                <p class="count">汉、朝、满、回、蒙</p>
+                
+            </div>
+            <div>
+                <p class="type1">陆上邻国</p>
+                <p class="count">朝、俄</p>
+            </div>
+            <div>
+                <p class="type1">水路相通</p>
+                <p class="count">朝、俄、韩、日</p>
+            </div>
+        </div>
+        <div class="right2">
+            <ul class="clearfix">
+                <li>
+                    <img src="../static/imgs/珲春新1.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/珲春新2.webp" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/珲春新3.webp" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/珲春新4.webp" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/珲春新5.jpg" alt="" class="bottom">
+                </li>
+                <li>
+                    <img src="../static/imgs/珲春新6.jpg" alt="" class="bottom">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="../static/js/libs/jquery-2.1.0.js"></script>
+<script src="../static/js/libs/echarts.min.js"></script>
+<script src="../static/js/libs/utils.js"></script>
+<script src="../static/js/js/珲春.js"></script>
+<script src="../static/js/js/flexible.js"></script>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>随机滚动文本</title>
+<style>
+body{
+    background:url("/static/imgs/antu.png");
+    background-repeat: no-repeat;
+    background-size:   100vw 100vh;
+}  
+.title {
+  position: absolute;
+  top: 0%; /* 相对于父容器的位置 */
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%); /* 居中定位 */
+  text-align: center; /* 文字居中 */
+  font-size: 24px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  color: black;
+}
+
+/* 设置返回按钮的样式 */
+.return-button {
+  position: absolute;
+  top: 10px; /* 相对于父容器的位置 */
+  right: 30px; /* 距离右边框10px */
+  font-size: 25px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  cursor: pointer; /* 鼠标样式为手型 */
+  a{
+    display: inline-block;  
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    color: #f48003;
+  }
+}
+
+/* 设置段落文字的样式 */
+.paragraph {
+  position: absolute;
+  top: 25%; /* 相对于父容器的位置 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-50%, -50%); /* 居中定位 */
+  text-align: left; /* 文字居中 */
+  font-size: 25px; /* 字体大小 */
+  font-family: Arial, sans-serif; /* 字体 */
+  color: black;
+}
+
+/* 设置滚动容器的样式 */
+.scroll-container {
+  position: fixed;
+  bottom: 0; /* 位于页面底部 */
+  left: 0;
+  width: 100%;
+  height: 50%; /* 限制容器高度为页面高度的一半 */
+  overflow: hidden; /* 隐藏超出部分 */
+}
+
+/* 设置文本的样式 */
+.scroll-text {
+  white-space: nowrap; /* 防止文本换行 */
+  animation: scrollText 5s linear infinite; /* 使用动画让文本滚动 */
+}
+
+/* 定义文本滚动的动画 */
+@keyframes scrollText {
+  from {
+    transform: translateX(100%); /* 从容器底部开始 */
+  }
+  to {
+    transform: translateX(-100%); /* 滚动到容器顶部 */
+  }
+}
+</style>
+</head>
+<body>
+    <div class="title">
+        <h1>安图县（中国朝鲜语:안도현）</h1>
+      </div>
+      
+    <div class="return-button" >
+      <a href="{{ url_for('antu') }}">返回</a>
+    </div>
+
+    <div class="paragraph">
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隶属吉林省延边朝鲜族自治州，
+            位于吉林省东部、延边朝鲜族自治州西南部，
+            与朝鲜三池渊市接壤，为长白山下第一县 。
+            全县幅员面积7444平方千米，边境线长33.9千米，
+            辖7个镇、2个乡、3个街道，行政村180个，
+            地处长白山北麓，境内群山起伏，沟壑纵横，长白山脉由南向北延伸。
+        </p>
+    </div>
+
+<div class="scroll-container" id="scroll-container"></div>
+
+<script>
+// 获取滚动容器
+var container = document.getElementById('scroll-container');
+
+// 定义可选的文本内容、颜色和字体大小
+var texts = [
+  "红石峰",
+  "长白山神庙遗址",
+  "长白山魔界风景区",
+  "长白山大关东文化园",
+  "长白山历史文化园",
+  "二道白河镇",
+  "长白山百花谷朝鲜族古村落",
+  "美人松廊桥公园",
+  "天池",
+  "湿地花海",
+  "红丰村",
+  "矿泉水",
+  "二龙山",
+  "长白山峡谷浮石林景区",
+  "长白山井邑满族银库",
+  "红旗村",
+  "九星泉",
+  "大戏台河景区",
+  "长白山",
+  "天然的森林氧吧",
+  "长白山雪岭生态森林驿站"
+];
+
+shuffleArray(texts);
+
+// 逐个添加文本并设置随机样式
+texts.forEach(function(text, index) {
+  
+  setTimeout(function() {
+    var scrollText = document.createElement('div');
+    scrollText.textContent = text;
+    scrollText.classList.add('scroll-text');
+    // 设置随机位置
+    var randomX = Math.floor(Math.random() * (window.innerWidth - 100)) + 'px'; // 随机水平位置
+    var randomY = Math.floor(Math.random() * (window.innerHeight / 2)) + (window.innerHeight / 2) + 'px'; // 随机垂直位置
+    scrollText.style.left = randomX;
+    scrollText.style.top = randomY;
+    // 设置随机颜色和字体大小
+    var r = Math.floor(Math.random() * 76) + 180;
+    var g = Math.floor(Math.random() * 76) + 180;
+    var b = Math.floor(Math.random() * 76) + 180;
+    // 将 RGB 值组合成颜色字符串
+    var randomColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    var minSize = 24; // 最小字体大小
+    var maxSize = 60;
+    var fontSize = Math.floor(Math.random() * (maxSize - minSize + 1)) + minSize;
+    var randomFontSize = fontSize + 'px';
+    scrollText.style.textShadow = '2px 2px 4px rgba(0,0,0,0.5)'; 
+    scrollText.style.color = randomColor;
+    scrollText.style.fontSize = randomFontSize;
+    container.appendChild(scrollText);
+  }, index * 3000); // 设置每段文本的延迟时间为3秒
+});
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
+</script>
+
+</body>
+</html>

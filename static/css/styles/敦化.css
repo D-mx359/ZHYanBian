@@ -1,0 +1,153 @@
+.module{
+    font-size: 25px;
+    color: rgb(3, 174, 248);
+    text-align: left;
+    margin: 0px;
+    padding-left: 30px;
+}
+#header{
+    height: 100px;
+    width: 95%;
+    /* background-color: blue; */
+    margin: 0px;
+    padding: 0; /* 添加这一行 */
+    }
+    #title{
+        height: 100px;
+        width: 50%;
+        margin: 0;
+        padding-right: 20%;
+        float:right;
+    } 
+    #title p{
+        color: rgb(43, 171, 226);
+        font-size: 50px;
+        line-height:100px;
+        text-align: right;
+        margin: 0px;
+    }
+    #back{
+        height: 100px;
+        width: 25%;
+        float: right;
+        text-align: right;
+        margin: 0px;
+        a{
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 25px;
+            text-decoration: none;
+            color: rgb(0, 149, 255);
+        }
+        a:hover{
+            color: #f48003;
+        }
+    }
+    
+    body{
+        background:url("/static/imgs/bg\ -\ 副本.jpg") center center;
+        background-size: cover;
+        margin: 0rem;
+        padding: 0rem;
+    }
+    .left{
+        width: 435px;
+        padding: 0px;
+        float: left;
+    }
+    .module{
+        height: 30px;
+    }
+    .left1{
+        width: 435px;
+        height: 450px;
+    }
+    #left1Chart{
+        height: 400px;
+    }
+    .left2{
+        width: 435px;
+        height: 355px;
+    }
+    #left2Chart{
+        height: 300px;
+    }
+    
+    .rq{
+        float: left;
+    }
+    .slide{
+        width: 700px;
+        height: 435px;
+        position: relative;
+    }
+    .slide-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: all 1.5s;
+    }
+    .slide-img:nth-child(1){
+        opacity: 1;
+    }
+    .button>ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .button li{
+        width: 14px;
+        height:14px ;
+        border-radius: 100%;
+        background-color:#ffffff;
+        float: left;
+        margin-right: 30px;
+        
+    }
+    .button li:hover{
+        background-color: #00ffff;
+    }
+    .button li:nth-child(1){
+        background-color: #00ffff;
+    }
+    .button{
+        position: absolute;
+        bottom: 30px;
+        right: 200px;
+    }
+
+.middle2{
+    width: 700px;
+    padding-top: 20px;
+
+}
+#middle2Chart{
+    height: 300px;
+}
+.right{
+    width: 500px;
+    /* background-color:#f48003; */
+    float: left;
+}
+.statistics{
+    height: 500px;
+
+}
+#right1Chart{
+    height: 490px;
+}
+.middle2 ul li{
+    background-color: aquamarine;
+    width: 140px;
+    height: 150px;
+    float: left;
+    margin: 3px;
+}
+ul{
+    list-style: none;
+}
+.bottom{
+    width: 140px;
+    height: 150px;
+}
